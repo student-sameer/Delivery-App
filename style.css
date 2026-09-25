@@ -1,0 +1,495 @@
+/* =========================================
+   1. BASIC SETUP (Margin reset & Colors)
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #333333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   2. NAVBAR & HEADER
+   ========================================= */
+.header {
+  background: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ff4757;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ff4757;
+}
+
+/* Header Buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart-badge {
+  background: white;
+  color: #ff4757;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 4px;
+}
+
+/* Mobile Hamburger Button (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+/* =========================================
+   3. HERO BANNER
+   ========================================= */
+.hero {
+  padding: 50px 0;
+  background: #fff3f3;
+}
+
+.hero-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.pill-badge {
+  color: #ff4757;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hero-text h1 {
+  font-size: 38px;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: #ff4757;
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid #555;
+  color: #555;
+}
+
+.hero-image-wrap {
+  flex: 1;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* =========================================
+   4. CATEGORY FILTER BUTTONS
+   ========================================= */
+.categories-section {
+  padding: 40px 0 10px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.section-title p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.filter-pills {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #ff4757;
+  color: white;
+  border-color: #ff4757;
+}
+
+/* =========================================
+   5. MENU CARDS (CSS GRID)
+   ========================================= */
+.menu-section {
+  padding: 30px 0 60px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
+  gap: 25px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.food-img-wrap {
+  position: relative;
+  height: 180px;
+}
+
+.food-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4757;
+  color: white;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.food-info {
+  padding: 15px;
+}
+
+.food-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.food-header h3 {
+  font-size: 16px;
+}
+
+.food-header .price {
+  color: #ff4757;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn-card {
+  width: 100%;
+  background: #f1f2f6;
+  color: #333;
+}
+
+.btn-card:hover {
+  background: #ff4757;
+  color: white;
+}
+
+/* =========================================
+   6. HOW IT WORKS & FOOTER
+   ========================================= */
+.how-section {
+  padding: 50px 0;
+  background: white;
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.step-card {
+  background: #f8fafc;
+  padding: 25px 15px;
+  border-radius: 8px;
+}
+
+.step-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background: #1e293b;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* =========================================
+   7. CART SIDEBAR & POPUPS
+   ========================================= */
+.cart-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+.cart-overlay.show {
+  display: block;
+}
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px; /* Hidden offscreen by default */
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s;
+  z-index: 100;
+}
+
+.cart-sidebar.open {
+  right: 0; /* Slide in */
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.cart-item button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.cart-footer {
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-checkout {
+  width: 100%;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: none;
+}
+
+.toast.show {
+  display: block;
+}
+
+/* =========================================
+   8. MEDIA QUERIES (RESPONSIVENESS)
+   ========================================= */
+
+/* Tablets (under 900px) */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Mobile Phones (under 768px) */
+@media (max-width: 768px) {
+  /* Show hamburger button */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Turn horizontal menu into dropdown */
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .navbar.open {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  /* Stack Hero section items vertically */
+  .hero-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  /* Make menu cards 1 per row */
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make how-it-works 1 per row */
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

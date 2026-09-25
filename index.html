@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Crucial meta tag for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiteDash | Fresh Food Delivery</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#" class="logo">Bite<span>Dash</span> 🍕</a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+        </ul>
+      </nav>
+
+      <!-- Cart Icon & Mobile Hamburger Button -->
+      <div class="header-actions">
+        <button class="cart-btn" id="cartToggleBtn" aria-label="Open Cart">
+          🛒 <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="pill-badge">🚀 30-Min Fast Delivery</span>
+        <h1>Delicious Food Delivered To Your Doorstep</h1>
+        <p>
+          Craving your favorite dishes? Order fresh, warm, and gourmet meals 
+          from the best restaurants in town with just a few clicks.
+        </p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">Order Now</a>
+          <a href="#how-it-works" class="btn btn-outline">Explore Menu</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img 
+          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" 
+          alt="Delicious freshly served meal"
+          class="hero-img"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CATEGORIES SECTION ================= -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2>Popular Categories</h2>
+        <p>Pick what you are craving right now</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-pills">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="pizza">🍕 Pizza</button>
+        <button class="filter-btn" data-category="burger">🍔 Burgers</button>
+        <button class="filter-btn" data-category="asian">🍣 Asian</button>
+        <button class="filter-btn" data-category="healthy">🥗 Healthy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOD MENU GRID ================= -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-title">
+        <h2>Explore Our Menu</h2>
+        <p>Hand-crafted meals made with premium organic ingredients</p>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Item 1 -->
+        <article class="food-card" data-category="pizza">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Margherita Pizza" />
+            <span class="food-tag">Popular</span>
+          </div>
+          <div class="food-info">
+            <div class="food-header">
+              <h3>Margherita Supreme</h3>
+              <span class="price">$14.99</span>
+            </div>
+            <p class="description">Fresh mozzarella, hand-crushed tomatoes, basil, and virgin olive oil.</p>
+            <button class="btn btn-card add-to-cart" data-name="Margherita Supreme" data-price="14.99">
+              + Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="food-card" data-category="burger">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Cheeseburger" />
+          </div>
+          <div class="food-info">
+            <div class="food-header">
+              <h3>Double Beef Burger</h3>
+              <span class="price">$12.50</span>
+            </div>
+            <p class="description">Smash beef patties, melted cheddar, crisp lettuce, and signature BBQ sauce.</p>
+            <button class="btn btn-card add-to-cart" data-name="Double Beef Burger" data-price="12.50">
+              + Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="food-card" data-category="asian">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Sushi Platter" />
+            <span class="food-tag">Chef Choice</span>
+          </div>
+          <div class="food-info">
+            <div class="food-header">
+              <h3>Salmon Nigiri Set</h3>
+              <span class="price">$18.00</span>
+            </div>
+            <p class="description">8-piece fresh Atlantic salmon nigiri served with wasabi and pickled ginger.</p>
+            <button class="btn btn-card add-to-cart" data-name="Salmon Nigiri Set" data-price="18.00">
+              + Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="food-card" data-category="healthy">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Healthy Bowl" />
+          </div>
+          <div class="food-info">
+            <div class="food-header">
+              <h3>Avocado Salad Bowl</h3>
+              <span class="price">$10.99</span>
+            </div>
+            <p class="description">Baby spinach, ripe avocado slices, cherry tomatoes, quinoa & lemon vinaigrette.</p>
+            <button class="btn btn-card add-to-cart" data-name="Avocado Salad Bowl" data-price="10.99">
+              + Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 5 -->
+        <article class="food-card" data-category="pizza">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=600&q=80" alt="Pepperoni Pizza" />
+          </div>
+          <div class="food-info">
+            <div class="food-header">
+              <h3>Spicy Pepperoni</h3>
+              <span class="price">$16.20</span>
+            </div>
+            <p class="description">Crisp crust topped with spicy beef pepperoni, jalapeños, and hot honey drizzle.</p>
+            <button class="btn btn-card add-to-cart" data-name="Spicy Pepperoni" data-price="16.20">
+              + Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 6 -->
+        <article class="food-card" data-category="burger">
+          <div class="food-img-wrap">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Chicken Burger" />
+          </div>
+          <div class="food-info">
+            <div class="food-header">
+              <h3>Crispy Chicken Burger</h3>
+              <span class="price">$11.40</span>
+            </div>
+            <p class="description">Fried chicken breast fillet, pickled slaw, honey mustard on a brioche bun.</p>
+            <button class="btn btn-card add-to-cart" data-name="Crispy Chicken Burger" data-price="11.40">
+              + Add to Cart
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="how-section" id="how-it-works">
+    <div class="container">
+      <div class="section-title">
+        <h2>How It Works</h2>
+        <p>Simple 3-step delivery process</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon">📍</div>
+          <h3>1. Choose Location</h3>
+          <p>Enter your address to see restaurants and gourmet kitchens ready to serve you.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">🍔</div>
+          <h3>2. Select Favorite Food</h3>
+          <p>Browse through hundreds of hand-picked dishes and add items to your cart.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">🛵</div>
+          <h3>3. Fast Doorstep Delivery</h3>
+          <p>Track your rider in real-time and enjoy piping-hot food delivered to your door.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SIDEBAR CART DRAWER ================= -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Food Cart</h3>
+      <button class="close-btn" id="closeCartBtn">&times;</button>
+    </div>
+
+    <!-- Items render here dynamically via JavaScript -->
+    <div class="cart-items" id="cartItemsContainer">
+      <p class="empty-cart-msg">Your cart is currently empty.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total Amount:</span>
+        <span class="total-price" id="cartTotalDisplay">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Toast notification message -->
+  <div class="toast" id="toast">Added to cart!</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 BiteDash Food Delivery. Built with pure HTML, CSS, and JS.</p>
+    </div>
+  </footer>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>
